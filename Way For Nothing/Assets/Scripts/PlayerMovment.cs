@@ -7,7 +7,7 @@ public class PlayerMovment : MonoBehaviour {
     public float movmentSpeed;
     public int verPosition = 1;
     public float timeEffect;
-    public Transform[] movePoint = new Transform[3];
+    public Transform[] movePoint;
     public GameObject jumpEffect;
 
     Rigidbody2D rb;
