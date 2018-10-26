@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour {
 
     public int Life = 3;
+    HUD hudLife;
 
     public void TakeDemage(int _demage)
     {
         Life -= _demage;
+        hudLife = FindObjectOfType<HUD>();
+        hudLife.ChangeLife();
 
         if(Life <= 0)
         {
