@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class PlayerMovment : MonoBehaviour {
 
     public float movmentSpeed;
@@ -20,24 +23,19 @@ public class PlayerMovment : MonoBehaviour {
     private void Update()
     {
         rb.velocity = Vector2.right * movmentSpeed * Time.deltaTime;
+        movmentSpeed += (Time.deltaTime * 5);
 
         if(Input.GetKeyDown(KeyCode.UpArrow) && verPosition != 2)
         {
-            verPosition = 2;
+            verPosition++;
             GameObject effect = Instantiate(jumpEffect, transform.position, Quaternion.identity);
             transform.position = new Vector2(transform.position.x, movePoint[verPosition].position.y);
             Destroy(effect,timeEffect);
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && verPosition != 1)
-        {
-            verPosition = 1;
-            GameObject effect = Instantiate(jumpEffect, transform.position, Quaternion.identity);
-            transform.position = new Vector2(transform.position.x, movePoint[verPosition].position.y);
-            Destroy(effect, timeEffect);
-        }
+        
         if (Input.GetKeyDown(KeyCode.DownArrow) && verPosition != 0)
         {
-            verPosition = 0;
+            verPosition--;
             GameObject effect = Instantiate(jumpEffect, transform.position, Quaternion.identity);
             transform.position = new Vector2(transform.position.x, movePoint[verPosition].position.y);
             Destroy(effect, timeEffect);

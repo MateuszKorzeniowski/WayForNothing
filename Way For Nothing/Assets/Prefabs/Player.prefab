@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 70319153656363958}
   - component: {fileID: 50547064572718456}
   - component: {fileID: 114112881592194486}
+  - component: {fileID: 114485148674283490}
   m_Layer: 0
   m_Name: BodyPlayer
   m_TagString: Player
@@ -264,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460125e595206d149af32f01188d7669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movmentSpeed: 1500
+  movmentSpeed: 1300
   verPosition: 1
   timeEffect: 3
   movePoint:
@@ -272,6 +273,18 @@ MonoBehaviour:
   - {fileID: 4909727390515846}
   - {fileID: 4615004636661156}
   jumpEffect: {fileID: 1490296207151916, guid: 8c101bf3eee2bda499ba729386464d86, type: 2}
+--- !u!114 &114485148674283490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523262141279208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d163a44d8faff4d99e89005bb751a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: 3
 --- !u!212 &212477355779897032
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -304,8 +317,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 708462867
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7abfa4d51ae806a458de2372ca39e109, type: 3}
   m_Color: {r: 0.0031594948, g: 0.6698113, b: 0.197267, a: 0.46666667}
@@ -350,8 +363,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 708462867
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cbf0df4abea5aea498d5817f58ccb1d9, type: 3}
   m_Color: {r: 0, g: 0.38679248, b: 0.11196628, a: 0.79607844}
